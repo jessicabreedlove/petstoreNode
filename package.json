@@ -1,0 +1,24 @@
+{
+  "name": "petstorenode",
+  "version": "1.0.0",
+  "description": "Jess practicing",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessicabreedlove/petstoreNode.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jessicabreedlove/petstoreNode/issues"
+  },
+  "homepage": "https://github.com/jessicabreedlove/petstoreNode#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
+  }
+}
