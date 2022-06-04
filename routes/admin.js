@@ -10,7 +10,7 @@ router.get('/add-pet', (req, res, next) => {
 });
 
 //POST
-router.post('/pet-profile', (req, res, next) => {
+router.post('/add-pet', (req, res, next) => {
   console.log(req.body);
   res.redirect('/');
 });
