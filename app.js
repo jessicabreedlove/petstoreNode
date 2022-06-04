@@ -4,21 +4,16 @@ const bodyParser = require('body-parser');
 const express = require('express');
 const app = express();
 
+const adminRoutes = require('./routes/admin');
+const shopRoutes = require('./routes/shop');
+
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use('/add-pet', (req, res, next) => {
-  res.send(
-    '<form action="add-profile" method="POST"><input type="text" name="name"><button type="submit">Add Pet</button></form>'
-  );
-});
+app.use(adminRoutes);
+app.use(shopRoutes);
 
-app.post('/pet-profile', (req, res, next) => {
-  console.log(req.body);
-  res.redirect('/');
-});
-
-app.use('/', (req, res, next) => {
-  res.send('<h1>Home Page</h1>');
+app.use((req, res, next) => {
+  res.status(404).send('<h1>Page Not Found</h1>');
 });
 
 app.listen(3000);
