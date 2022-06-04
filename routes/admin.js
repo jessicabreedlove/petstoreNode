@@ -1,12 +1,12 @@
+const path = require('path');
 const express = require('express');
+const rootDir = require('../util/path');
 
 const router = express.Router(); //mini express app
 
 //GET
 router.get('/add-pet', (req, res, next) => {
-  res.send(
-    '<form action="/pet-profile" method="POST"><input type="text" name="name"><button type="submit">Add Pet</button></form>'
-  );
+  res.sendFile(path.join(rootDir, 'views', 'add-product.html'));
 });
 
 //POST
